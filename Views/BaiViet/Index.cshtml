@@ -1,0 +1,56 @@
+﻿@using CafeOnline.Common;
+@using CafeOnline.Models;
+@model BAIVIET
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MenyOnlyLayout.cshtml";
+    var lsBaiViet = CafeOnlineDB.ConnectDatabase().BAIVIETs.ToList();
+}
+
+<style>
+    #container {
+        margin-top: 10px;
+    }
+
+    #product-heading {
+        padding: 10px 0 30px 0;
+    .menu ul{
+             list-style:none;
+             margin: 5px 0;
+         }
+    }
+</style>
+<div id="heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2>@Model.MoTaNgan</h2>
+                    <span> Đăng ngày: <i>@Model.NgayDang </i> bởi <a href="http://fb.com/TatChu">The Boss</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="product-post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div >
+                    <ul class="menu" style="margin:5px; list-style:none;">
+                        @foreach (var i in lsBaiViet)
+                        {
+                            <li><a href="/BaiViet/Index?id=@i.BaiVietID">@i.MoTaNgan</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                @Html.Raw(HttpUtility.HtmlDecode(Model.ChiTiet))
+            </div>
+        </div>
+    </div>
+</div>

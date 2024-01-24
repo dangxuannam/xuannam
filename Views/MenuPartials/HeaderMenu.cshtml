@@ -1,0 +1,131 @@
+﻿@using CafeOnline.Common;
+@using CafeOnline.Models;
+@{
+    var nguoidung = Session[CommonConstants.CUSTOMER_SESSION_NAME] as NGUOIDUNG;
+    var ad = Session[CommonConstants.ADMIN_SESSION_NAME] as NGUOIDUNG;
+    var cashier = Session[CommonConstants.CASHIER_SESSION_NAME] as NGUOIDUNG;
+    var waiter = Session[CommonConstants.WAITER_SESSION_NAME] as NGUOIDUNG;
+}
+
+
+<style>
+    .search-box input[type="button"] {
+    background-color: transparent;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    right: 0;
+    top: 0;
+    border: 0;
+    content: '';
+    color: transparent;
+    background: url(../images/search-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+</style>
+
+
+<header>
+    <div id="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="home-account">
+                        @if (Session[CommonConstants.ADMIN_SESSION_NAME] != null)
+                        { <a href="#">Xin chào <span class="green">@ad.HoTenNV</span></a>
+                        <a class="green" href="/Admin/TrangChu/Index">Vào trang quản trị</a>}
+                        else
+                            if (Session[CommonConstants.CASHIER_SESSION_NAME] != null)
+                        {
+                            <a href="#">Xin chào <span class="green">@cashier.HoTenNV</span></a>
+                            <a class="green" href="/Cashier/TongQuan">Vào hệ thống</a>}
+                        else
+                            if (Session[CommonConstants.WAITER_SESSION_NAME] != null)
+                        {
+                            <a href="#">Xin chào <span class="green">@waiter.HoTenNV</span></a>
+                            <a class="green" href="/Waiter/TrangChuNhanVien">Nhân viên</a>}
+                        else
+                            if (Session[CommonConstants.CUSTOMER_SESSION_NAME] != null)
+                        {  <a href="#">Xin chào <span class="green">@nguoidung.HoTenNV</span></a>}
+                        else
+                        {  <a href="/DangNhap">Đăng nhập</a>}
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cart-info">
+
+                        <i class="fa fa-language"></i>
+                        @*(<a href="#">5 items</a>) in your cart (<a href="#">$45.80</a>)*@
+                        <select class="select-menu">
+                            <option value="vi">Tiếng Việt</option>
+                            <option value="en">English</option>
+                            <option value="cn">中國</option>
+                        </select>
+                        <style>
+                            .select-menu {
+                                border: hidden;
+                                background-color: #333;
+                                color: #f78e21;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main-header">
+        <div class="container">
+
+            <div class="row" id="nav-menu">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <a href="@CommonConstants.HOMEPAGE"><img src="~/Assets/images/logo.png" title="Grill Template" alt="Grill Website Template"></a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href="@CommonConstants.HOMEPAGE"><i class="fa fa-home"></i></a></li>
+                            <li><a href="/GioiThieu">Giới thiệu</a></li>
+                            <li><a href="/ThucDon">Thực đơn</a></li>
+                            <li><a href="/BaiViet/Index">Tin tức</a></li>
+                            <li><a href="/LienHe">Liên hệ</a></li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="search-box">
+
+                        <form name="search_form" action="/ThucDon/TimKiem" method="get" class="search_form">
+                            <input id="txt_search" name="tukhoa" type="text" />
+                            <input type="submit" id="search_button"  />
+
+                        @*<form name="search_form" method="get" class="search_form">
+                            <input id="txt_search" type="text" />
+                            <input type="submit" id="search-button"  />
+
+                        </form>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<script src="~/Assets/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="~/Assets/js/vendor/jquery.gmap3.min.js"></script>
+<script src="~/Assets/js/plugins.js"></script>
+<script src="~/Assets/js/main.js"></script>
+
+<script>
+
+        $("#txt_search").autocomplete({
+            source: '/ThucDon/DsTenHang'
+        });
+</script>
