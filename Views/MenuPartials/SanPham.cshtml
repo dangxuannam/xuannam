@@ -1,0 +1,39 @@
+﻿
+@using CafeOnline.Models;
+
+@model List<MATHANG>
+<div id="latest-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Thực đơn mới</h2>
+                    <img src="/Assets/images/under-heading.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <div class="blog-post">
+                        <div class="blog-thumb">
+                            <img height="253" width="373" src="/Images/SanPham/@item.HinhAnh" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="content-show">
+                                <h4><a href="/ThucDon/XemMon?id=@item.MatHangID">@item.TenMatHang</a></h4>
+                                @*Nhóm: <span class="green">@item.LOAIMATHANG.TenLoaiHang</span>*@
+                                <br />
+                                Đăng ngày: <span>@String.Format("{0:d}", item.NgayTao)</span>
+                            </div>
+                            <div class="content-hide">
+                                <p>@item.MoTa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

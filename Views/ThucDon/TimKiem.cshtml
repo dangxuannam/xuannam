@@ -1,0 +1,116 @@
+﻿@using CafeOnline.Models;
+@using PagedList.Mvc;
+@using CafeOnline.Common;
+@model PagedList.PagedList<MATHANG>
+@{
+    ViewBag.Title = "Thực đơn";
+    Layout = "~/Views/Shared/_MenyOnlyLayout.cshtml";
+    CafeOnlineDB db = CafeOnlineDB.ConnectDatabase();
+    var lsCategory = db.LOAIMATHANGs.ToList();
+
+
+}
+<style>
+    #Container {
+        margin-top: 10px;
+    }
+
+    #product-heading {
+        padding: 10px 0 30px 0;
+    }
+
+    .heading-section {
+        padding: 10px 0 50px 0;
+    }
+
+    .pagination {
+        margin-top: 5px;
+    }
+</style>
+
+
+
+<div id="heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-content">
+                    <h2>Tìm kiếm sản phẩm</h2>
+                    <span>@ViewBag.ThongBao</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id="products-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="product-heading">
+                    <h2>Nhóm thực đơn</h2>
+                    <img src="~/Assets/images/under-heading.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filters col-md-12 col-xs-12">
+                <ul id="filters" class="clearfix">
+                    <li><span><a class="blue" >Kết quả tìm kiếm</a></span></li>
+                    <li><span><a href="/ThucDon/Index">Tất cả</a></span></li>
+                    @foreach (var item in lsCategory)
+                    {
+                        <li><span><a href="/ThucDon/Nhom?id=@item.TenLoaiHang">@item.TenLoaiHang</a></span></li>
+                    }
+                    @*<li><span class="filter" data-filter=".ginger">Ginger</span></li>
+                        <li><span class="filter" data-filter=".pizza">Pizza</span></li>
+                        <li><span class="filter" data-filter=".pasta">Pasta</span></li>
+                        <li><span class="filter" data-filter=".drink">Drink</span></li>
+                        <li><span class="filter" data-filter=".hamburger">Hamburger</span></li>*@
+                </ul>
+            </div>
+        </div>
+        <div class="row" id="Container">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 col-sm-6 mix portfolio-item Pizza">
+                    <div class="portfolio-wrapper">
+                        <div class="portfolio-thumb">
+                            <img height="270" width="250" src="~/Images/SanPham/@item.HinhAnh" alt="" />
+                            <div class="hover">
+                                <div class="hover-iner">
+                                    <a class="fancybox" href="~/Images/SanPham/@item.HinhAnh"><img src="~/Assets/images/open-icon.png" alt="" /></a>
+                                    <span>@item.MoTa</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="label-text">
+                            <h3><a href="/ThucDon/XemMon?id=@item.MatHangID">@item.TenMatHang</a></h3>
+                            <span class="text-category">@String.Format("{0:0,0}", item.DonGia)</span>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+
+
+        <!--Tạo liên kết các trang-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+
+                    <div class="MenuTrang">
+                        @Html.PagedListPager(Model, page => Url.Action("CuaHang", new { trang = page }))
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

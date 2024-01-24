@@ -1,0 +1,203 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    @*
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/testimonails-slider.css">*@
+    <link href="~/Assets/css/testimonails-slider.css" rel="stylesheet" />
+    <link href="~/Assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Assets/css/templatemo_misc.css" rel="stylesheet" />
+    <link href="~/Assets/css/templatemo_style.css" rel="stylesheet" />
+
+    @*
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>*@
+    <script src="~/Assets/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://dichvuso.xyz/"></a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    @Html.Action("HeaderMenu", "MenuPartials")
+
+
+    @RenderBody()
+
+    <div id="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div class="slider-caption">
+                        <h1>Phong cảnh</h1>
+                        <p>
+                            Tọa lạc trên vinh Nha Trang một trong những vịnh được xếp hạng đẹp nhất thế giới.
+                            <br /> <br /> Nằm trên ngọn đồi Lasan, nơi này sẽ giúp quý khách có những phút giây thư giản thoải mái nhất...
+                        </p>
+                        <a href="single-post.html">Xem ảnh</a>
+                    </div>
+                    <img src="~/Assets/images/slide1.jpg" alt="" />
+                </li>
+                <li>
+                    <div class="slider-caption">
+                        <h1>Thực đơn hấp dẫn</h1>
+                        <p>
+                            Với tổng số gần 300 món đồ uống các loại. Chúng tôi tin rằng đó sẽ là những hương vị
+                            <br><br> tuyệt vời nhất cho bạn.
+                        </p>
+                        <a href="single-post.html">Xem thực đơn</a>
+                    </div>
+                    <img src="~/Assets/images/slide2.jpg" alt="" />
+                </li>
+                <li>
+                    <div class="slider-caption">
+                        <h1>Nhân viên thân thiện</h1>
+                        <p>
+                            Với phương châm khách hàng là số một chúng tôi luôn lắng nghe và thay đổi cho phù hợp với
+                            <br><br> yêu cầu của quý khách.
+                        </p>
+                        <a href="single-post.html">Đặt bàn trước</a>
+                    </div>
+                    <img height="600" width="1400" src="~/Images/Other/55cntt1.jpg" alt="" />
+                </li>
+                <li>
+                    <div class="slider-caption">
+                        <h1>Phục vụ chuyên nghiệp</h1>
+                        <p>
+                            Sở hữu những công nghệ tiên tiến nhất chúng tôi cam kết sẽ mang tới cho bạn những trải nghiệm
+                            <br><br> vô cùng tuyệt vời. Mời các bạn ghé qua và thử một lần nhé
+                        </p>
+                        <a href="single-post.html">Đặt bàn</a>
+                    </div>
+                    <img src="~/Assets/images/slide2.jpg" alt="" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-section">
+                        <h2>Các lĩnh vực của BossCf</h2>
+                        <img src="~/Assets/images/under-heading.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa fa-coffee"></i>
+                        </div>
+                        <h4>Phục vụ giải khát</h4>
+                        <p>Với hơn 300 món trong thực đơn bao gồm cafe, sinh tố, nước ép trái cây, ... chúng tôi tìn rằng dó sẽ là phút giây thoải mái nhất của quý khách và người thân.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa fa-external-link"></i>
+                        </div>
+                        <h4>Ăn sáng</h4>
+                        <p>Chúng tôi có hơn 20 món ăn, đáp ứng hầu hết các nhu cầu của khách hàng.Cùng với phong cảnh hữu tình và đội ngũ nhân viên nhiệt tình đó sẽ là những món ăn điểm tâm giúp quý khách có một ngày làm việc hiệu quả.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa fa-puzzle-piece"></i>
+                        </div>
+                        <h4>Giải trí</h4>
+                        <p>Mỗi tối thứ 4 hàng tuần chúng tôi tổ chức đêm nhạc cụ dân tộc. Nếu bạn có một lần được thưởng thức đêm nhạc này chúng tôi tin rằng đó sẽ cách tốt nhất để mất đi những nỗi muộn phiền trong cuộc sống.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa fa-bullhorn"></i>
+                        </div>
+                        <h4>Tổ chức sự kiện</h4>
+                        <p>Với quy mô trên 500 khách, địa điểm ngay tại khu du lịch Hòn Chồng sẽ phù hợp với những cuộc gặp mặt, liên hoan,...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @Html.Action("SanPham", "MenuPartials")
+
+    <div id="testimonails">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-section">
+                        <h2>HOẠT ĐỘNG CỦA QUÁN</h2>
+                        <img src="~/Assets/images/under-heading.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="testimonails-slider">
+                        <ul class="slides">
+                            <li>
+                                <div class="testimonails-content">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    <h6>Đăng bởi: <a href="#">The Boss</a></h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonails-content">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    <h6>Đăng bởi: <a href="#">The Boss</a></h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonails-content">
+                                    <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    <h6>Đăng bởi: <a href="#">The Boss</a></h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   @Html.Action("FooterMenu", "MenuPartials")
+
+
+    
+        @*<script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/jquery.gmap3.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>*@
+
+</body>
+</html>
