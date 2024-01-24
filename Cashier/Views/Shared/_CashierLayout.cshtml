@@ -1,0 +1,195 @@
+﻿@using CafeOnline.Common;
+@using CafeOnline.Models;
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    @*
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/testimonails-slider.css">*@
+    <link href="~/Assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Assets/css/templatemo_misc.css" rel="stylesheet" />
+    <link href="~/Assets/css/templatemo_style.css" rel="stylesheet" />
+    @*
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>*@
+    <script src="~/Assets/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://dichvuso.xyz/"></a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+
+    <style>
+        .menu-bottom {
+            background: #344832;
+        }
+
+            .menu-bottom option {
+                background-color: #344832;
+            }
+
+        .menu-bottom option select {
+            color: chocolate;
+            margin-right: 50px;
+
+        }
+        .home-account a{
+            margin-left:50px;
+        }
+        .select-menu
+        {
+            margin-right:50px;
+        }
+    </style>
+    <header>
+        <div id="top-header">
+            <div class="container">
+               @Html.Action("BottomMenu", "CashierPartials")
+        </div>
+        </div>
+        <div id="main-header">
+            <div class="container">
+
+                <div class="row" id="nav-menu">
+                    <div class="col-md-2">
+                        <div class="logo">
+                            <a href="@CafeOnline.Common.CommonConstants.HOMEPAGE"><img src="~/Assets/images/logo.png" title="Boss Cafe & Entertaiments"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="main-menu">
+                            <ul>
+                                <li><a href="@CafeOnline.Common.CommonConstants.HOMEPAGE"><i class="fa fa-home"></i></a></li>
+                                <li><a href="/Cashier/TongQuan">Hệ thống</a></li>
+                                <li><a href="/Cashier/ChamCong">Chấm công</a></li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <div class="search-box">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </header>
+
+    @RenderBody()
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer-cashier">
+        <div class="container">
+            <div class="main-footer">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="more-info">
+                            <h4 class="footer-title">Thông tin Hệ thống</h4>
+                            <ul>
+                                @{
+                                    var thungan = Session[CommonConstants.CASHIER_SESSION_NAME] as NGUOIDUNG;}
+                                <li>Nhân viên: @thungan.HoTenNV</li>
+                                 @{if (DateTime.Now.Hour < 14)
+                                    {
+                                <li>Ca làm: Ca 1(06h-14h)</li>}
+                                    else
+                                    {
+                                <li>Ca làm: Ca 2(14h-22h)</li> }
+                                }
+                                <li><a href="/Cashier/THuNgan/DangXuat">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="shop-list">
+                            <h4 class="footer-title">Chức năng</h4>
+                            <ul>
+                                <li><a href="/Cashier/ChamCong"><i class="fa fa-angle-right"></i>Chấm công</a></li>
+                                <li><a href="/Cashier/BanHang/TimHoaDon"><i class="fa fa-angle-right"></i>Tìm hóa đơn</a></li>
+                                <li><a href="/Cashier/BaoCaoCa"><i class="fa fa-angle-right"></i>Báo cáo kết ca</a></li>
+                                <li><a href="/Cashier/THuNgan/DangXuat"><i class="fa fa-angle-right"></i>Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="recent-posts">
+                            <h4 class="footer-title">Hoạt động gần đây</h4>
+                            @{ var lshd = CafeOnlineDB.ConnectDatabase().HOATDONGs.Where(n => n.LoaiHoatDong == 1).OrderByDescending(n=>n.ThoiGian).Take(5).ToList();}
+                            <ul>
+                                @foreach(var i in lshd)
+                                {
+                                    <li>@i.NoiDung</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="more-info">
+                            <h4 class="footer-title">Chức năng nâng cao</h4>
+                            <ul>
+                                <li><i class="fa fa-plus"></i><a href="#">Thêm khách hàng mới</a></li>
+                                <li><i class="fa fa-plus"></i><a href="#">Thêm nhân viên mới</a></li>
+                                <li><i class="fa fa-plus"></i><a href="#">Thêm ca làm việc mới</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <p>
+                    <span>
+                        Copyright © @DateTime.Now.Year <a href="http://dichvuso.xyz">BossCafe &amp; Entertaiments</a>
+                        | Developed by: <a rel="nofollow" href="http://www.dichvuso.xyz" target="_parent"><span class="blue">The </span><span class="green"> Boss</span></a>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    @*
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/jquery.gmap3.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>*@
+
+    @*<script src="~/Assets/js/vendor/jquery-1.11.0.min.js"></script>*@
+    <script src="~/Assets/js/vendor/jquery.gmap3.min.js"></script>
+    <script src="~/Assets/js/plugins.js"></script>
+    <script src="~/Assets/js/main.js"></script>
+</body>
+</html>

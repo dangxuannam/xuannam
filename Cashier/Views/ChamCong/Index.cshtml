@@ -1,0 +1,253 @@
+﻿@using CafeOnline.Common;
+@using CafeOnline.Models;
+@{
+    ViewBag.Title = "Danh sách chấm công phục vụ";
+    Layout = "~/Areas/Cashier/Views/Shared/_CashierLayout.cshtml";
+    var thungan = Session[CommonConstants.CASHIER_SESSION_NAME] as NGUOIDUNG;
+}
+@model List<CHAMCONG>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<div id="latest-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="hr" />
+                @*<div class="heading-section-cashier">
+                        <img src="~/Assets/images/under-heading.png" alt="">
+                    </div>*@
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-5 col-sm-6 boder">
+                <div class="blog-post">
+                    <h2 class="text-center">Chấm công</h2>
+                    <div class="heading-section-cashier">
+                        <img src="/Assets/images/under-heading.png" alt="">
+                    </div>
+
+                    <div class="blog-thumb">
+                        <div>
+                            <div>
+
+                                <div>
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control mar-top-0" id="ip-nhan-vien" placeholder="Họ tên nhân viên">
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control mar-top-0" id="ip-ca-lam" placeholder="Ca làm">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" id="btn_cham" class="btn btn-primary">Chấm</button>
+                                    </div>
+                                </div>
+                                <div class="text-left"><label class="has-error  mar-top10 label-danger" id="lb-err"></label></div>
+                                <div>
+                                    <div class="col-md-5 mar-top10">
+                                        <input type="text" class="form-control mar-top-0" id="ip-di-muon" placeholder="Đi muộn">
+                                    </div>
+                                    <div class="col-md-7  mar-top10">
+                                        <input type="text" class="form-control mar-top-0" id="ip-ghi-chu" placeholder="Ghi chú">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <hr class="hr" />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-7 col-sm-6 boder">
+                <div class="blog-post">
+                    <h2 class="text-center">Công đã chấm hôm nay (@String.Format("{0:d}", DateTime.Now))</h2>
+                    <div class="heading-section-cashier">
+                        <img src="/Assets/images/under-heading.png" alt="">
+                    </div>
+
+                    <div class="blog-thumb">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Nhân viên</th>
+                                        <th>Ca làm</th>
+                                        <th>Ghi chú / Đi muộn</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ls-td">
+                                    @foreach (var cong in Model)
+                                    {
+                                        <tr id="tr-@cong.ChamCongID">
+                                            <td>@cong.NGUOIDUNG.HoTenNV</td>
+                                            <td>@cong.CALAMVIEC.TenCa</td>
+                                            <td>@cong.DiMuon / @cong.GhiChu</td>
+                                            <td>
+                                                <a href="#" onclick="edit(@cong.ChamCongID)" class="green"><i title="Sửa" class="fa fa-pencil"></i> </a>
+                                                &nbsp;&nbsp;
+                                                <a href="#" onclick="del(@cong.ChamCongID)" class="red"><i title="Xóa" class="fa fa-times"></i> </a>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    .mar-top-0 {
+        margin-top: 0px;
+    }
+
+    .hr {
+        background-color: yellow;
+        height: 3px;
+        border: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .boder {
+        margin-top: 10px;
+        padding: 20px;
+        outline: 2px solid #ccc;
+        outline-offset: -10px;
+    }
+
+    .mar-top10 {
+        margin-top: 10px;
+    }
+</style>
+<script>
+    var domainURL = 'http://192.168.56.1:1234';
+    //auto complete  nhân viên và ca làm
+    $(function () {
+        $("#ip-ca-lam").autocomplete({
+            source: '/ChamCong/DsCaLam'
+        });
+
+        $("#ip-nhan-vien").autocomplete({
+            source: '/ChamCong/DsNhanVien'
+        });
+
+        $("#ip-di-muon").autocomplete({
+            source: '/ChamCong/QuyDinhDiMuon'
+        });
+    });
+
+    function getAll()
+    {
+        $.ajax({
+            url: '/Cashier/TimKiem/CongTrongNgay',
+            //data: JSON.stringify(obj),
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+
+            },
+            error: function (res) {
+                alert(res.res);
+            }
+        });
+    }
+
+
+    $("#btn_cham").click(function () {
+
+        var TenCaLam = $('#ip-ca-lam').val();
+        var tenNhanVien = $('#ip-nhan-vien').val();
+        var DiMuon = $("#ip-di-muon").val();
+        var GhiChu = $("#ip-ghi-chu").val();
+
+        $.ajax({
+            url: '/Cashier/ChamCong/ThemCongMoi?TenCaLam=' + TenCaLam + '&tenNhanVien=' + tenNhanVien + '&DiMuon=' + DiMuon+'&GhiChu='+GhiChu,
+            //data: JSON.stringify(obj),
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.res == -1)
+                    $("#lb-err").text("Họ tên nhân viên chưa đúng!").fadeOut(6000);
+                else
+                    if (result.res == -2)
+                        $("#lb-err").text("Ca làm việc chưa đúng!").fadeOut(6000);
+                    else
+                        if (result.res == -3)
+                            $("#lb-err").text("Quy định đi muộn bị lỗi!").fadeOut(6000);
+                    else
+
+                    {
+                        $("#lb-err").text("Chấm công thành công!").fadeOut(4000);
+                        var html = $("#ls-td").html();
+                        html += '<tr id="tr-'+ result.res +'">';
+                        html += '<td>' + tenNhanVien + '</td>';
+                        html += '<td>' + TenCaLam + '</td>';
+                        html += '<td>' + DiMuon + '/' + GhiChu + '</td>';
+                        html += '<td>'+ '<a href=""  class="green"><i title="Sửa" class="fa fa-pencil"></i> </a>';
+                        html+= ' &nbsp;&nbsp;';
+                        html +=  '<a href="#"  onclick="del(' + result.res + ')" class="red"><i title="Xóa" class="fa fa-times"></i> </a>'
+                        html += '</td>';
+                        html += '</tr>';
+                        $("#ls-td").html(html);
+                    }
+            },
+            error: function (res) {
+                alert(res.res);
+            }
+        });
+    })
+
+    function del(id)
+    {
+        var cf = confirm("Xác nhận xóa công?");
+        if(cf)
+        {
+            $.ajax({
+                url: '/Cashier/ChamCong/XoaCong?id='+id,
+                //data: JSON.stringify(obj),
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+
+                    if(result.res == 1)
+                        $("#tr-" + id).remove();
+                    else
+                    {
+                        alert("Lỗi trong quá trình thực hiện! Không tồn tại công!");
+                        window.location.href=domainURL;
+                    }
+                },
+                error: function (res) {
+                    alert("Có lỗi xảy ra! Vui lòng thử lại sau!");
+                }
+            });
+
+
+        }
+        else
+            alert("Canceled!");
+
+    }
+</script>

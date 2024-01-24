@@ -1,0 +1,40 @@
+﻿@using CafeOnline.Models;
+@model NGUOIDUNG
+<div class="row navbar-fixed-bottom menu-bottom">
+    <div class="col-md-6">
+        <div class="home-account">
+            <a href="#"> Cập nhật mới nhất lúc: <span class="green"> @DateTime.Now.ToShortTimeString() </span> </a>
+            <a href="#">Ca: <span class="green">(8h-14h) </span> </a>
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <div class="cart-info">
+
+            <i class="fa fa-language"></i>
+            <span class="blue"> Thu ngân:</span>
+
+            <select class="select-menu">
+                <option value="thungan">@Model.HoTenNV</option>
+                <option class="divider"></option>
+                <option value="bc">Báo cáo kết ca</option>
+                <option value="tim_HD">Tìm hóa đơn</option>
+                <option value="sys">Hệ thống</option>
+                <option value="chamcong">Chấm công</option>
+                <option class="divider"></option>
+                <option value="tk">Tài khoản</option>
+                <option value="dmk">Đổi mật khẩu</option>
+                <option onclick="" value="dx">Đăng xuất</option>
+            </select>
+            <style>
+                .select-menu {
+                    border: hidden;
+                    background-color: #344832;
+                    color: #f78e21;
+                }
+
+            </style>
+        </div>
+    </div>
+</div>
+
