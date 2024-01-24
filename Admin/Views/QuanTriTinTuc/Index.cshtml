@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CafeOnline.Models.BAIVIET>
+
+@{
+    ViewBag.Title = "Danh sách bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="main-content">
+    <div class="page-content">
+        <h2>Danh sách mặt bài viết trên hệ thống BossCF</h2>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MoTaNgan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChuDe)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HinhAnh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayDang)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayViet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrangThai)
+                </th>
+                <th>Thao tác</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MoTaNgan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChuDe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HinhAnh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayDang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HinhAnh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayViet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TrangThai)
+                    </td>
+                    <td>
+                        <a href="/BaiViet/Index?id=@item.BaiVietID" class="green"><i title="Xem" class="fa fa-eye"></i> </a>
+                        &nbsp;&nbsp;
+                        <a href="/QuanTriTinTuc/SuaBai?id=@item.BaiVietID" class="blue"><i title="Sửa" class="fa fa-eyedropper"></i> </a>
+                        &nbsp;&nbsp;
+                        <a href="/QuanTriTinTuc/XoaBai?id=@item.BaiVietID" class="red confirm-delete"><i title="Xóa" class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

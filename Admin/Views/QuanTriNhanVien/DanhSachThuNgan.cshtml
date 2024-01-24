@@ -1,0 +1,107 @@
+﻿@model IEnumerable<CafeOnline.Models.NGUOIDUNG>
+
+@{
+    ViewBag.Title = "Danh sách thu ngân";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*Tiêu đề*@
+<div class="main-content">
+    <div class="page-content">
+        <h3>Danh sách thu ngân</h3>
+        <table class="table">
+            <tr>
+
+                <th>
+                    @Html.Label("Tên đăng nhập")
+                </th>
+                <th>
+                    @Html.Label("Email")
+                </th>
+                <th>
+                    @Html.Label("Họ tên")
+                </th>
+                <th>
+                    @Html.Label("Ngày sinh")
+                </th>
+             
+                <th>
+                    @Html.Label("Ngày tạo")
+                </th>
+                <th>
+                    @Html.Label("Ảnh đại diện")
+                </th>
+                <th>
+                    @Html.Label("Đã đăng nhập")
+                </th>
+                <th>
+                    @Html.Label("Địa chỉ")
+                </th>
+                <th>
+                    @Html.Label("Điện thoại")
+                </th>
+                <th>
+                    @Html.Label("Ngày vào làm")
+                </th>
+               
+              
+                <th>
+                    @Html.Label("Lương theo giờ")
+                </th>
+                <th>
+                    @Html.Label("Lần cuối đăng nhập")
+                </th>
+                <th>Thao tác</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenDangNhap)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTenNV)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgaySinh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayTao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnhDaiDien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLanDangNhap) lần
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiaChi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DienThoai)
+                    </td>
+                    <td>
+                        @String.Format("{0:d}", Html.DisplayFor(modelItem => item.NgayVaoLam))
+                    </td>
+                  
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LuongTheoGio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LanCuoiDangNhap)
+                    </td>
+                    <td>
+                        <a href="/Admin/QuanTriNhanVien/CapNhatThongTin?id=@item.NguoiDungID" class="blue"><i title="Sửa" class="fa fa-eyedropper"></i> </a>
+                        &nbsp;&nbsp;
+                        <a href="/Admin/QuanTriNhanVien/Xoa?id=@item.NguoiDungID" class="red confirm-delete"><i title="Xóa" class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

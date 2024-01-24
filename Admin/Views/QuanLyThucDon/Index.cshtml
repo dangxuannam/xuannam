@@ -1,0 +1,123 @@
+﻿@model IEnumerable<CafeOnline.Models.MATHANG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*Tiêu đề*@
+<div class="main-content">
+    @*<div class="breadcrumbs ace-save-state breadcrumbs-fixed" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Thực đơn</a>
+                </li>
+                <li >Thêm thực đơn</li>
+            </ul><!-- /.breadcrumb -->
+
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
+                    <span class="input-icon">
+                        <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off">
+                        <i class="ace-icon fa fa-search nav-search-icon"></i>
+                    </span>
+                </form>
+            </div><!-- /.nav-search -->
+        </div>*@
+
+    @*Nội dung*@
+    <div class="page-content">
+        <h2>Danh sách mặt hàng BossCF</h2>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaMatHang)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenMatHang)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MoTa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoaiHang)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HinhAnh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DonGia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DVT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayTao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LuotXem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GhiChu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrangThai)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaMatHang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenMatHang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MoTa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LoaiHang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HinhAnh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonGia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DVT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayTao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LuotXem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GhiChu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TrangThai)
+                    </td>
+                    <td>
+                        <a href="/ThucDon/XemMon?id=@item.MatHangID" class="green"><i title="Xem" class="fa fa-eye"></i> </a>
+                        &nbsp;&nbsp;
+                        <a href="/Admin/QuanLyThucDon/CapNhatThongTin?id=@item.MatHangID" class="blue"><i title="Sửa" class="fa fa-eyedropper"></i> </a>
+                        &nbsp;&nbsp;
+                        <a href="/Admin/QuanLyThucDon/Xoa?id=@item.MatHangID" class="red confirm-delete"><i title="Xóa" class="fa fa-times"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
