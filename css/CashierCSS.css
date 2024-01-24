@@ -1,0 +1,99 @@
+﻿
+.boder {
+    margin-top: 10px;
+    padding: 20px;
+    outline: 2px solid #ccc;
+    outline-offset: -10px;
+}
+
+
+.h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.detail-table table {
+    width: 100%;
+}
+
+.hr {
+    background-color: yellow;
+    height: 3px;
+    border: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.input-note {
+    width: auto;
+}
+
+.mar-top10 {
+    margin-top: 15px;
+}
+
+.mar-top20 {
+    margin-top: 20px;
+}
+
+.tien-doanh-thu {
+    color: tomato;
+}
+
+.tien-chua-thu {
+    color: deeppink;
+}
+
+.center-box {
+    align-content: center;
+}
+
+.mat-hang {
+    width: 100%;
+}
+
+.so-luong {
+    width: 80%;
+}
+
+.nhan-vien {
+    width: 90%;
+}
+
+.ghi-chu {
+    width: 100%;
+}
+
+.action {
+}
+
+.center {
+    text-align: center;
+}
+
+.input-khachhang {
+    padding: 0;
+    width: 85%;
+    margin-top: 0px;
+}
+
+.red {
+    color: red;
+}
+
+.align-right-text {
+    text-align: right;
+}
+
+.input-check-out {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.model-footer-center {
+    padding: 19px 20px 20px;
+    /* margin-top: 15px; */
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
