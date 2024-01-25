@@ -1,0 +1,151 @@
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\csc.exe
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\System.Collections.Immutable.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\System.Reflection.Metadata.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\vbc.exe
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\VBCSCompiler.exe
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\roslyn\VBCSCompiler.exe.config
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\CafeOnline.dll.config
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\CafeOnline.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\CafeOnline.pdb
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Antlr3.Runtime.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.SqlServer.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Google.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Web.Infrastructure.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Newtonsoft.Json.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Owin.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Helpers.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Mvc.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Optimization.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Razor.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Deployment.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Razor.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\WebGrease.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Helpers.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Mvc.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Optimization.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Razor.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Deployment.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Razor.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Antlr3.Runtime.pdb
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Newtonsoft.Json.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.SqlServer.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Google.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\obj\Debug\CafeOnline.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\obj\Debug\CafeOnline.pdb
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\JsonServices.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\JsonServices.Web.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Facebook.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\Facebook.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\PagedList.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\PagedList.Mvc.dll
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\PagedList.xml
+D:\ASP.NET\CafeManagementSystemOnline\CafeOnline\bin\PagedList.Mvc.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\obj\Debug\CafeOnline.csprojResolveAssemblyReference.cache
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\obj\Debug\CafeOnline.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\obj\Debug\CafeOnline.pdb
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\csc.exe
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\System.Collections.Immutable.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\System.Reflection.Metadata.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\vbc.exe
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\VBCSCompiler.exe
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\roslyn\VBCSCompiler.exe.config
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\CafeOnline.dll.config
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\CafeOnline.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\CafeOnline.pdb
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Antlr3.Runtime.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.SqlServer.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Facebook.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Google.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Web.Infrastructure.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Newtonsoft.Json.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Owin.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\PagedList.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\PagedList.Mvc.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Helpers.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Mvc.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Optimization.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Razor.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Deployment.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Razor.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\WebGrease.dll
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Facebook.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Newtonsoft.Json.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\PagedList.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\PagedList.Mvc.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Helpers.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Mvc.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Optimization.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.Razor.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Deployment.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\System.Web.WebPages.Razor.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Antlr3.Runtime.pdb
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\EntityFramework.SqlServer.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Google.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Documents\Visual Studio 2015\Projects\CafeManagementSystemOnline\CafeOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
